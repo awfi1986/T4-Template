@@ -54,7 +54,7 @@ namespace TianYu.Admin.Service.IService
     /// <summary>
     /// <#=EntityDesc#>服务
     /// </summary>
-    public interface I<#=EntityDesc#>Service
+    public interface I<#=EntityName#>Service
     { 
     }
 }
