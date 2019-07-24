@@ -40,7 +40,16 @@ public class ServiceTemplate : CSharpTemplate
             return _tb_name.Replace("s_", string.Empty);
         }
     }
-  
+    
+    public string SmallEntityName
+    {
+        get
+        {
+	  string name = _tb_name.Replace("s_", string.Empty);
+	  return name.Substring(0,1).ToLower()+name.Substring(1); 
+        }
+    }
+    
     public override string TransformText()
     {
         base.TransformText();
@@ -55,10 +64,10 @@ namespace TianYu.Admin.Service.Service
 	/// </summary> 
     public class <#=EntityName#>Service :I<#=EntityName#>Service
     {
-        private readonly I<#=EntityName#>Repository _<#=EntityName#>Repository;
-        public <#=EntityName#>Service(I<#=EntityName#>Repository <#=EntityName#>Repository)
+        private readonly I<#=EntityName#>Repository _<#=SmallEntityName#>Repository;
+        public <#=EntityName#>Service(I<#=EntityName#>Repository <#=SmallEntityName#>Repository)
         {
-            this._<#=EntityName#>Repository = <#=EntityName#>Repository;
+            this._<#=SmallEntityName#>Repository = <#=SmallEntityName#>Repository;
         }
     }
 }
