@@ -52,7 +52,7 @@ using System.Collections.Generic;
 namespace TianYu.Admin.Service.IService
 {
     /// <summary>
-    /// <#=EntityDesc#>服务
+    /// <#=EntityDesc#>业务逻辑接口
     /// </summary>
     public interface I<#=EntityName#>Service
     { 
