@@ -60,7 +60,7 @@ using TianYu.Admin.Service.IService;
 namespace TianYu.Admin.Service.Service
 {
     /// <summary> 
-	/// <#=EntityDesc#>仓储服务类
+	/// <#=EntityDesc#>业务逻辑类
 	/// </summary> 
     public class <#=EntityName#>Service :I<#=EntityName#>Service
     {
